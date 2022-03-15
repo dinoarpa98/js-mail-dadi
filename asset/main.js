@@ -7,17 +7,23 @@
 // Generare un numero random da 1 a 6, sia per il giocatore sia per il computer.
 // Stabilire il vincitore, in base a chi fa il punteggio più alto.
 
-let email = [ "pincopallo@outlook.com" , "giuseppeff@gmail.it" ];
+let mail = [ "pincopallo@outlook.com" , "giuseppeff@gmail.it", "giuseppegg@gmail.it" , "pincopallo@outlook.com"];
+
 let getemail = prompt("Inserisci la tua E-mail");
 
+let trovata = false;
 
-for( i=0; i < email.length; i++ ){
 
-  if ( email[i] == getemail ){
-      document.getElementById("container").innerHTML = `<div> Sei in lista ${email[i]} </div>`;
-      console.log("il tuo nome è nella lista!");
-  } else if( email[i] != getemail ){
-      console.log("il tuo nome non è nella lista!");
-      document.getElementById("container").innerHTML = `<div> Non sei in lista </div>`;
+ for( i=0; i < mail.length; i++ ){
+
+   if (mail[i] == getemail) {
+     trovata = true;
+   }
+ }
+  if ( trovata == true ){
+      document.getElementById("container").innerHTML = `<div> <h1> Sei in lista </h1></div>`;
+  
+    } else if ( mail[i] != getemail ){
+      document.getElementById("container").innerHTML = `<div> <h1> Non sei in lista </h1> </div>`;
   }
-}  
+ 
